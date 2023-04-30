@@ -1,24 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3em;
-}
 .box-calculadora{
-    width: 400px;
+    width: 75%;
     padding: .5em;
     margin-top: 10px;
-    background-color: #c4c4c4;
+    background-color: #cfcece;
     color: #000;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    font-size: 1.2em;
 }
 #container h1{
     color: #070707;
