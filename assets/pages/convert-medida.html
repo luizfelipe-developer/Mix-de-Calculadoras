@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+    <title>Conversor de Medidas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- <div class="caixa-img">
+                <a href=""><img src="../copo.jpg" alt=""></a>
+            </div> -->
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">Calculadora Simples</a></li>
+                <li><a href="">Calculadora Bhaskara</a></li>
+                <li><a href="">Calculadora de Gorjeta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <div class="main">
+            <h2>Conversor de Medidas</h2>
+            <form action="form">
+                <input type="number" name="valorUm" id="valorUm" value="1" required>
+                <div class="boxMedidas">
+                    <select name="selectMedidaUm" id="selectMedidaUm">
+                        <option value="mm">Milímetro</option>
+                        <option value="cm">Centímetro</option>
+                        <option value="dm">Decímetro</option>
+                        <option value="m">Metro</option>
+                        <option value="dam">Decâmetro</option>
+                        <option value="hm">Hectômetro</option>
+                        <option value="km">Quilômetro</option>
+                    </select>
+                    <p>para</p>
+                    <select name="selectMedidaDois" id="selectMedidaDois">
+                        <option value="mm">Milímetro</option>
+                        <option value="cm">Centímetro</option>
+                        <option value="dm">Decímetro</option>
+                        <option value="m">Metro</option>
+                        <option value="dam">Decâmetro</option>
+                        <option value="hm">Hectômetro</option>
+                        <option value="km">Quilômetro</option>
+                    </select>
+                </div>
+                <button type="button" onclick="converter()">Converter</button>
+            </form>
+            <div id="box-result">
+                <span id="resultUm"></span>
+                <span id="resultDois"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="../js/calcAreas.js" defer ></script>
+    <title>Área do Quadrado</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+    
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+        .box-result{
+          background-color: bisque;
+          width: 200px;
+          height: 200px;
+        }
+      </style>
+</head>
+<body>
+    <div id="container">
+        <form class="box-calc">
+            <label for="number">
+                inserir lado do Quadrado
+                <input type="number" name="number" id="lado-quadrado" placeholder="12">
+            </label>
+            <button type="button" onclick="quadrado()" >Calcular</button>
+            <div class="box-result">
+                <p id="result"></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

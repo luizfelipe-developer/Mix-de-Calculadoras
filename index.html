@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/calc.css">
+    <title>CALCULADORAS DIVERSAS</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#container">Calculadora Simples</a></li>
+                    <li><a href="assets/pages/gorjeta.html">Calculadora de Gorjeta</a></li>
+                    <li><a href="assets/pages/equa-2-grau.html">Equação 2° Grau</a></li>
+                    <li class="header-areas"><a href="#">Areas</a>
+                        <ul>
+                            <li><a href="assets/pages/areas/A-quadrado.html">Quadrado</a></li>
+                            <li><a href="assets/pages/areas/A-triangulo.html">Triângulo</a></li>
+                            <li><a href="assets/pages/areas/A-circulo.html">Círculo</a></li>
+                            <li><a href="assets/pages/areas/A-trapezio.html">Trapézio</a></li>
+                            <li><a href="assets/pages/areas/circunferencia.html">Circunferência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">IMC</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box-calculadora">
+
+            <h1>Calculadora</h1>
+            <div id="operacoes">
+                <span id="previos-operation"></span>
+                <span id="visor"></span>
+            </div>
+            <div id="buttons-container">
+                <button onclick="limpar()">CE</button>
+                <button onclick="limpar()">C</button>
+                <button onclick="voltar()">&larr;</button>
+                <button onclick="pegar('/')">&divide;</button>
+                <button class="number" onclick="pegar('7')">7</button>
+                <button class="number" onclick="pegar('8')">8</button>
+                <button class="number" onclick="pegar('9')">9</button>
+                <button onclick="pegar('*')">&times;</button>
+                <button class="number" onclick="pegar('4')">4</button>
+                <button class="number" onclick="pegar('5')">5</button>
+                <button class="number" onclick="pegar('6')">6</button>
+                <button onclick="pegar('-')">&minus;</button>
+                <button class="number" onclick="pegar('1')">1</button>
+                <button class="number" onclick="pegar('2')">2</button>
+                <button class="number" onclick="pegar('3')">3</button>
+                <button onclick="pegar('+')">+</button>
+                <button class="number" onclick="pegar('.')">.</button>
+                <button class="number" onclick="pegar('0')">0</button>
+                <button id="equal-btn" onclick="calcular()">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function pegar(num) {
+            /* variavel */
+            var numero = document.getElementById('visor').innerHTML; /*=num/ exemplo de outra forma de declaração*/
+            /* acumulador de numeros para equação */
+            document.getElementById("visor").innerHTML = numero + num
+
+        }
+        function limpar() {
+            document.getElementById('visor').innerHTML = "";
+        }
+        function voltar() {
+            //voltar um digito errado
+            var visor = document.getElementById('visor').innerHTML;
+            document.getElementById('visor').innerHTML = visor.substring(0, visor.length - 1)
+        }
+        function calcular() {
+            //visor da equação
+            var visor = document.getElementById('visor').innerHTML;
+
+            if (visor) {
+                document.getElementById('visor').innerHTML = eval(visor);
+            }
+            else {
+                document.getElementById('visor').innerHTML = "0"
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html>

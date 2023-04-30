@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/calcAreas.js"></script>
+    <title>Área do Trapézio</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+    
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+        .box-result{
+          background-color: bisque;
+          width: 200px;
+          height: 200px;
+        }
+      </style>
+</head>
+<body>
+    <div id="container">
+        <form class="box-calc">
+            <label for="Base">
+                inserir valor da base maior do Trapézio
+                <input type="number" name="Base" id="Base" placeholder="12">
+            </label>
+            <label for="base">
+                inserir valor da base menor do Trapézio
+                <input type="number" name="base" id="base" placeholder="12">
+            </label>
+            <label for="altura">
+                inserir o valor da altura do Trapézio
+                <input type="number" name="altura" id="altura" placeholder="7">
+            </label>
+            <button type="button" onclick="trapezio()" >Calcular</button>
+            <div class="box-result">
+                <p id="result"></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

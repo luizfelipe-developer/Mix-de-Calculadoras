@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/gorjeta.css">
+    <script type="text/javascript" src="../js/gorjeta.js" defer></script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* input[type="number"] {
+            -moz-appearance: textfield;
+        } */
+    </style>
+    <title>Calculadora de Gorjeta</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Calculadora Simples</a></li>
+                    <li><a href="#container">Calculadora de Gorjeta</a></li>
+                    <li><a href="assets/pages/equa-2-grau.html">Equação 2° Grau</a></li>
+                    <li class="header-areas"><a href="#">Areas</a>
+                        <ul>
+                            <li><a href="assets/pages/areas/A-quadrado.html">Quadrado</a></li>
+                            <li><a href="assets/pages/areas/A-triangulo.html">Triângulo</a></li>
+                            <li><a href="assets/pages/areas/A-circulo.html">Círculo</a></li>
+                            <li><a href="assets/pages/areas/A-trapezio.html">Trapézio</a></li>
+                            <li><a href="assets/pages/areas/circunferencia.html">Circunferência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">IMC</a></li>
+                </ul>
+            </nav>
+        </div>        
+            <h1 class="title">Calculadora de Gorjeta</h1>
+
+        <div class="box-gorjeta">
+            <form id="form" class="form">
+                <div class="box-inputs">
+
+                    <label for="vlconta">
+                        <p>Quanto ficou a conta?</p>
+                    </label>
+                    <p>
+                        R$ <input type="number" placeholder="100" name="vlconta" id="vlconta" class="forminput" required>
+                        </input>
+                    </p>
+                </div>
+                
+                <div class="box-inputs">
+                    <label for="satisfacao">
+                        <p>Como foi o serviço?</p>
+                    </label>
+                    <p>
+                        <select name="satisfacao" id="satisfacao" class="formselect" required>
+                            <option disabled selected value="-1">--Escolha uma opção --</option>
+                            <option value="0.15">15% - Muito bom</option>
+                            <option value="0.1">10% - Bom</option>
+                            <option value="0.05">5% - Ruim</option>
+                            <option value="0.00">0% - Péssimo</option>
+                        </select>
+                    </p>
+                </div>
+             
+                <div class="box-inputs">
+                    <label for="pessoas">
+                        <p>Quantas pessoas irâo dividir a conta?</p>
+                    </label>
+                    <p>
+                        <input type="number" placeholder="1" name="pessoas" id="numpessoas" class="forminput" required>
+                    </p>
+                </div>
+                <button type="submit" class="calcular">Calcular!</button>
+            </form>
+        </div>
+        <div id="gorjeta">
+            Gorjeta Total:
+            R$<span id="totalgorjeta">0.00</span>
+            <span id="txcada">cada</span>
+        </div>
+    </div>
+</body>
+
+</html>
