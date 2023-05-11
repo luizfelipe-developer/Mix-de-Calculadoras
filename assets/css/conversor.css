@@ -45,6 +45,10 @@ button{
     border-radius: 9px;
     cursor: pointer;
 }
+button:hover{
+    border: #000 1px solid;
+    background-color: #fff;
+}
 /* #box-result{
     max-width: 250px;
     width: 100%;

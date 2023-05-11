@@ -41,6 +41,10 @@ button{
     font-size: 15px;
     cursor: pointer;
 }
+button:hover{
+    border: #000 1px solid;
+    background-color: #fff;
+}
 .box-result{
     padding: 7px;
     font-size: 1.2em;
