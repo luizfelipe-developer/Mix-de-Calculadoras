@@ -47,9 +47,9 @@ a{
 a:active{
     opacity: 0.8;
 }
-a:hover{
-    transition: padding 0.2s;
-    padding: 13px;
+li:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
 }
 .header-areas ul{
     display: none;
